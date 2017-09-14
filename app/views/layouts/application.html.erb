@@ -3,12 +3,23 @@
   <head>
     <title>Ojalabook</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+
+  	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">  		
+  		<div class="container">
+  			<a href="#" class="navbar-brand">Ojalabook</a>
+  			<ul class="nav navbar-nav">
+  				<li class="active"><%= link_to "Status", statuses_path %></li>
+  			</ul>
+  		</div>
+  	</div>
+
+	<div class="container">
+    	<%= yield %>
+    </div>
+
   </body>
 </html>
